@@ -12,12 +12,12 @@ export const login = (args) => {
     return axios.post("/v1/api/account/login", args).catch(e => e.response);
 };
 
-// 로그인 여부 확인 HTTP GET 메서드로 호그인 여부 확인 API를 호출하고 응답값을 리턴하는 기능
+// 로그인 여부 확인 : HTTP GET 메서드로 로그인 여부 확인 API를 호출하고 응답값을 리턴하는 기능
 export const check = () => {
     return axios.get("/v1/api/account/check").catch(e => e.response);
 };
 
-// 로그아웃
+// 로그아웃 : HTTP POST 메서드로 로그아웃 API를 호출하고 응답값을 리턴하는 기능
 export const logout = () => {
     return axios.post("/v1/api/account/logout").catch(e => e.response);
 }
